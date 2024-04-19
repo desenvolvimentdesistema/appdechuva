@@ -7,7 +7,7 @@
         <Image Source="ceuensolarado.jpg"
                Opacity=".6"
                Aspect="AspectFill"/>
-        <Label Text="Chuva"
+        <Label Text="Sol"
             TextColor="Marine"
             Margin="20"
             FontSize="60"
@@ -19,7 +19,7 @@
           Spacing="10"
           Margin="15,0,15,40">
 
-        <Frame x:Name="frameSettings"
+        <Label x:Name="LabelSol"
           IsVisible="false"
           Margin="10,20"
           CornerRadius="20"
@@ -29,25 +29,37 @@
 
 
           <Grid>
-          <Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColunmDefinitions>
+              <ColunmDefinition Width="*"/>
+              <ColunmDefinition Width="*"/>
+            </Grid.ColunmDefinitions>
+            <Label Text="Chuva"
+                TextColor="Marine"
+                Margin="20"
+                FontSize="40"
+                FontFamily="fonte.font"
+                HorizontalOptions="Center"
+                HorizontalTextAligment="Center"
+                Grid.Row="0"
+                Grid.Colunm="0"/>
+            <Label x:Name="LabelChuva"
+                TextColor="Marine"
+                Margin="20"
+                FontSize="40"
+                FontFamily="fonte.font"
+                HorizontalOptions="Center"
+                HorizontalTextAligment="Center"
+                Grid.Row="0"
+                Grid.Colunm="1"/>
 
-          <RowDefinition Height="120"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-        <Label Text="Humidade"
-               TextColor="Marine"
-               Margin="20"
-               FontSize="40"
-               FontFamily="fonte.font"
-               HorizontalOptions="Center"
-               HorizontalTextAligment="Center"
-               Grid.Row="0"/>
-<Grid>
-</Frame>
+          <Grid>
+        </Frame>
 
-    <Frame x:Name="Sol"
+    <Label x:Name="LabelNublado"
         IsVisible="false"
         Margin="10,20"
         CornerRadius="20"
@@ -56,21 +68,26 @@
         VerticalOptions="Fill">
 
     <Grid>
-        <Grid.RowDefinitions>
-        <RowDefinition Height="90"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="60"/>
-    </Grid.RowDefinitions>
-    <Label Text="Amanhecer"
+          <Grid.RowDefinitions>
+          <RowDefinition Height="90"/>
+          <RowDefinition Height="*"/>
+         <RowDefinition Height="60"/>
+          </Grid.RowDefinitions>
+          </Grid.ColunmDefinitions>
+     <ColunmDefinition Width="*"/>
+       <ColunmDefinition Width="*"/>
+       </Grid.ColunmDefinitions>
+    <Label Text="Noite"
             TextColor="Marine"
             Margin="20"
             FontSize="40"
             FontFamily="Papyrus"
             HorizontalOptions="Center"
             HorizontalTextAligment="certer"
-            Grid.row="0"/>
+            Grid.row="0"
+            Grid.Colunm="2"/>
 
-            <Label Text="vento"
+            <Label x:Name="LabelNoite"
             CharacterSpacing="1"
             LineHight="1.5"
             TextColor="Marine"

@@ -3,39 +3,102 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="appdechuva.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+     <Grid>
+        <Image Source="sol.jpg"
+               Opacity=".6"
+               Aspect="AspectFill"/>
+        <Label Text="Sunrise"
+            TextColor="Marine"
+            Margin="20"
+            FontSize="60"
+            FontFamily="fonte.font"
+            HorizontalOptions="Center"
+            HorizontalTextAligment="Center"
+            VerticalOptions="Center"/>
+        <VerticalOptions="End"
+          Spacing="10"
+          Margin="15,0,15,40">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Label x:Name="LabelSunrise"
+          IsVisible="false"
+          Margin="10,20"
+          CornerRadius="20"
+          BackgroundColor="Gray"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill">
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColunmDefinitions>
+              <ColunmDefinition Width="*"/>
+              <ColunmDefinition Width="*"/>
+            </Grid.ColunmDefinitions>
+            <Label Text="Rain"
+                TextColor="Marine"
+                Margin="20"
+                FontSize="40"
+                FontFamily="fonte.font"
+                HorizontalOptions="Center"
+                HorizontalTextAligment="Center"
+                Grid.Row="0"
+                Grid.Colunm="0"/>
+            <Label x:Name="LabelRain"
+                TextColor="Marine"
+                Margin="20"
+                FontSize="40"
+                FontFamily="fonte.font"
+                HorizontalOptions="Center"
+                HorizontalTextAligment="Center"
+                Grid.Row="0"
+                Grid.Colunm="1"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+          <Grid>
+        </Frame>
 
-        </VerticalStackLayout>
-    </ScrollView>
+    <Label x:Name="LabelCloudness"
+        IsVisible="false"
+        Margin="10,20"
+        CornerRadius="20"
+        BackgroundColor="Gray"
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill">
 
-</ContentPage>
+    <Grid>
+          <Grid.RowDefinitions>
+          <RowDefinition Height="90"/>
+          <RowDefinition Height="*"/>
+         <RowDefinition Height="60"/>
+          </Grid.RowDefinitions>
+          </Grid.ColunmDefinitions>
+     <ColunmDefinition Width="*"/>
+       <ColunmDefinition Width="*"/>
+       </Grid.ColunmDefinitions>
+    <Label Text="Night"
+            TextColor="Marine"
+            Margin="20"
+            FontSize="40"
+            FontFamily="Papyrus"
+            HorizontalOptions="Center"
+            HorizontalTextAligment="certer"
+            Grid.row="0"
+            Grid.Colunm="2"/>
+
+            <Label x:Name="LabelNight"
+            CharacterSpacing="1"
+            LineHight="1.5"
+            TextColor="Marine"
+            HorizontalOptions="Center"
+            HorizontalTextAligment="Center"
+            FontSize="20"
+            FontFamily="CachetStBold"
+            Grid.Row="1"/>
+
+            </Grid>
+            </frame>
+            <Grid/> 
+            </ContentPage>
+
